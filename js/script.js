@@ -36,6 +36,7 @@ var options = {
       $(".slick-arrow").hide()
       $("#last-next").hide()
       $("#submit-btn").removeClass("d-none").addClass("d-block animate__animated animate__pulse infinite");
+      $("#thanks-text").removeClass("d-none").addClass("d-block")
     })
 
 
