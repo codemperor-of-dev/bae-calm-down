@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg: #fff;
+    --color:  #1d566e;
+    --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+  }
+header {
+    background-color: #1d566e;
+    border-radius: 4px;
+  }
+.color-form-bg{
+    background-color: #1d566e !important;
+}
+.border-color{
+
+    border: #1d566e solid 4px !important;
+}
+.bird-position-submit{
+  position: relative;
+  top: 102px;
+  left: -87px;
+}
+
+.slick-arrow{
+  display: inline-block;
+  text-align: center;
+  background: var(--color);
+  color: var(--bg);
+  padding: 10px 20px ;
+  border-radius: 0.5em;
+  border-style: none;
+  position: relative;
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 1.25rem;
+  margin-top: 12px;
+}
+.submit-btn{
+    display: inline-block;
+    text-align: center;
+    background: var(--color);
+    color: var(--bg);
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    border-style: none;
+    position: relative;
+    min-width: 8.23em;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 1.25rem;
+    letter-spacing: 2.3px;
+}
+.infinite{
+  animation-iteration-count: infinite;
+}
+.submit-btn:before,
+.submit-btn:after {
+  width: 4.4em;
+  height: 2.95em;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background: var(--color);
+  border-radius: 50%;
+  transition: transform 1s ease;
+  transform: scale(0);
+  z-index: -1;
+}
+.submit-btn:before {
+    top: -25%;
+    left: 20%;
+  }
+  
+  .submit-btn:after {
+    bottom: -25%;
+    right: 20%;
+  }
+  
+  .submit-btn:hover:before,
+  .submit-btn:hover:after {
+    transform: none;
+  }
+  
+  .submit-btn:hover {
+    color: #fff;
+  }
+  .slick-prev{
+    display: none !important;
+  }
+  select{
+    height: 21vh;
+  }
+  select option {
+    transition: 0.3s;
+    border: #1d566e solid 2px ;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  select option:checked {
+    background-color: #1d566e !important;
+    color: white;
+    font-weight: bold;
+   
+}
+select option:hover{
+  transform: translateX(5px);
+}
+  
+
+  
