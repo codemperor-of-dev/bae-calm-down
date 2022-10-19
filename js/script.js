@@ -19,7 +19,7 @@ var options = {
     });
 
     subCategory.map(function (el, index) {
-      $("#sc").append(`<option value="${index}" class="color-form-bg p-5  fw-bold text-white text-center" data-category="${el.category_id}">${el.name}</option>`);
+      $("#sc").append(`<option value="${index}" class="p-5  fw-bold text-black text-center" data-category="${el.category_id}">${el.name}</option>`);
 
     });
 
