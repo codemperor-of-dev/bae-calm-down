@@ -1,36 +1,111 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 :root {
-    --bg: #fff;
-    --color:  #1d566e;
-    --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
-  }
+  --bg: #fff;
+  --color: #1d566e;
+  --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+}
+#formPage,
+#sendResultPage,
+#feedbackPage {
+  display: none;
+}
 header {
-    background-color: #1d566e;
-    border-radius: 4px;
-  }
-.color-form-bg{
-    background-color: #1d566e !important;
+  background-color: #1d566e;
+  border-radius: 4px;
 }
-.border-color{
+.win-htet {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.textWrapper {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+}
+.textWrapper h1 {
+  margin-bottom: 13px;
+  color: #1d566e;
+  margin-right: 150px;
+}
+.textWrapper p {
+  font-size: 20px;
+  color: #1d566e;
+}
 
-    border: #1d566e solid 3px !important;
+.textWrapper .fa-face-kiss {
+  font-size: 30px;
+  color: #1d566e;
 }
-.bird-position-submit{
+
+.formLinkStyle {
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #0e3a4d;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+}
+
+.imgStyle {
+  width: 500px;
+  height: 500px;
+}
+
+@media all and (max-width: 1000px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .textWrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .textWrapper h1 {
+    margin-right: 0;
+  }
+}
+.color-form-bg {
+  background-color: #1d566e !important;
+}
+.border-color {
+  border: #1d566e solid 3px !important;
+}
+.bird-position-submit {
   position: relative;
   top: 102px;
   left: -87px;
 }
 
-.slick-arrow{
+.slick-arrow {
   display: inline-block;
   text-align: center;
   background: var(--color);
   color: var(--bg);
-  padding: 10px 20px ;
+  padding: 10px 20px;
   border-radius: 0.5em;
   border-style: none;
   position: relative;
@@ -39,24 +114,24 @@ header {
   font-size: 1.25rem;
   margin-top: 12px;
 }
-.submit-btn{
-    display: inline-block;
-    text-align: center;
-    background: var(--color);
-    color: var(--bg);
-    font-weight: bold;
-    padding: 1.18em 1.32em 1.03em;
-    line-height: 1;
-    border-radius: 1em;
-    border-style: none;
-    position: relative;
-    min-width: 8.23em;
-    text-decoration: none;
-    font-family: var(--font);
-    font-size: 1.25rem;
-    letter-spacing: 2.3px;
+.submit-btn {
+  display: inline-block;
+  text-align: center;
+  background: var(--color);
+  color: var(--bg);
+  font-weight: bold;
+  padding: 1.18em 1.32em 1.03em;
+  line-height: 1;
+  border-radius: 1em;
+  border-style: none;
+  position: relative;
+  min-width: 8.23em;
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 1.25rem;
+  letter-spacing: 2.3px;
 }
-.infinite{
+.infinite {
   animation-iteration-count: infinite;
 }
 .submit-btn:before,
@@ -73,45 +148,41 @@ header {
   z-index: -1;
 }
 .submit-btn:before {
-    top: -25%;
-    left: 20%;
-  }
-  
-  .submit-btn:after {
-    bottom: -25%;
-    right: 20%;
-  }
-  
-  .submit-btn:hover:before,
-  .submit-btn:hover:after {
-    transform: none;
-  }
-  
-  .submit-btn:hover {
-    color: #fff;
-  }
-  .slick-prev{
-    display: none !important;
-  }
-  select{
-    height: 21vh;
-  }
-  select option {
-    transition: 0.3s;
-    border: #1d566e solid 2px ;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  
-  select option:checked {
-    background-color: #1d566e !important;
-    color: white;
-    font-weight: bold;
-   
+  top: -25%;
+  left: 20%;
 }
-select option:hover{
+
+.submit-btn:after {
+  bottom: -25%;
+  right: 20%;
+}
+
+.submit-btn:hover:before,
+.submit-btn:hover:after {
+  transform: none;
+}
+
+.submit-btn:hover {
+  color: #fff;
+}
+.slick-prev {
+  display: none !important;
+}
+select {
+  height: 21vh;
+}
+select option {
+  transition: 0.3s;
+  border: #1d566e solid 2px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+select option:checked {
+  background-color: #1d566e !important;
+  color: white;
+  font-weight: bold;
+}
+select option:hover {
   transform: translateX(5px);
 }
-  
-
-  

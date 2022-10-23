@@ -1,43 +1,60 @@
+const switchBtn = document.querySelectorAll(".switchPage");
+const sections = document.querySelectorAll("section");
+console.log(sections);
+switchBtn.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    for (let i = 0; i < sections.length - 1; i++) {
+      let section = sections[i];
+      if (section.id === event.target.getAttribute("data-nextId")) {
+        section.style.display = "block";
+      } else {
+        section.style.display = "none";
+      }
+    }
+  });
+});
 
-$('.single-item').slick();
+$(".single-item").slick();
 var options = {
-    strings: ['Please...', 'Fill Form...'],
-    typeSpeed: 50,
-    backSpeed:40,
-    backDelay:2000,
-    loop:true,
-  };
-  var typed = new Typed('.element', options);
-  category = ["buy me some food", "ask me out for movie date", "buy me a gift"];
-    let subCategory = [
-      { name: "what do you wanna eat?", category_id: 0 },
-      { name: "what movie would you love?", category_id: 1 },
-      { name: "what do you want as a love gift?", category_id: 2 }
-    ];
-    category.map(function (el, index) {
-      $("#c").append(`<option class="py-2 fs-6 ps-2" value="${index}">${el}</option>`);
-    });
+  strings: ["Please...", "Fill Form..."],
+  typeSpeed: 50,
+  backSpeed: 40,
+  backDelay: 2000,
+  loop: true,
+};
+var typed = new Typed(".element", options);
+category = ["buy me some food", "ask me out for movie date", "buy me a gift"];
+let subCategory = [
+  { name: "what do you wanna eat?", category_id: 0 },
+  { name: "what movie would you love?", category_id: 1 },
+  { name: "what do you want as a love gift?", category_id: 2 },
+];
+category.map(function (el, index) {
+  $("#c").append(
+    `<option class="py-2 fs-6 ps-2" value="${index}">${el}</option>`
+  );
+});
 
-    subCategory.map(function (el, index) {
-      $("#sc").append(`<option value="${index}" class="p-5  fw-bold text-black text-center" data-category="${el.category_id}">${el.name}</option>`);
+subCategory.map(function (el, index) {
+  $("#sc").append(
+    `<option value="${index}" class="p-5  fw-bold text-black text-center" data-category="${el.category_id}">${el.name}</option>`
+  );
+});
 
-    });
+$("#c").on("change", function () {
+  let currentCategoryId = $(this).val();
+  $("#sc option").hide();
+  $(`[data-category=${currentCategoryId}]`).show();
+});
 
-    $("#c").on("change", function () {
-      let currentCategoryId = $(this).val();
-      $("#sc option").hide();
-      $(`[data-category=${currentCategoryId}]`).show();
-    });
-    
-    $("#last-next").on("change",function(){
-      $(".element").hide()
-      $(".bird-img").addClass("bird-position-submit")
-      $(".typed-cursor").hide()
-      $(".slick-arrow").hide()
-      $("#last-next").hide()
-      $("#submit-btn").removeClass("d-none").addClass("d-block animate__animated animate__pulse infinite");
-      $("#thanks-text").removeClass("d-none").addClass("d-block")
-    })
-
-
-
+$("#last-next").on("change", function () {
+  $(".element").hide();
+  $(".bird-img").addClass("bird-position-submit");
+  $(".typed-cursor").hide();
+  $(".slick-arrow").hide();
+  $("#last-next").hide();
+  $("#submit-btn")
+    .removeClass("d-none")
+    .addClass("d-block animate__animated animate__pulse infinite");
+  $("#thanks-text").removeClass("d-none").addClass("d-block");
+});
