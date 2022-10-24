@@ -23,11 +23,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -63,150 +59,110 @@
     </section>
     <!-- start by Caleb -->
     <section id="formPage" class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-          <div class="d-flex justify-content-end">
-            <img
-              src="./assests/bird.png"
-              class="bird-img w-25 animate__animated animate__fadeInRight animate__delay-1s"
-              alt=""
-            />
+      <div class="row justify-content-center  ">
+        <div class="col-12 col-md-12 col-lg-6 col-xl-6 ">
+          <div class="d-flex justify-content-end ">
+            <img src="./assests/bird.png" class="bird-img w-25 animate__animated animate__fadeInRight animate__delay-1s "
+              alt="">
           </div>
-          <h1 class="text-start"><span class="element"></span></h1>
-          <div class="single-item">
-            <div id="form-card shadow bg-light">
-              <div id="one" class="border-color rounded-3">
-                <div class="p-3">
-                  <h3 class="text-black text-center">Are you mad at me?</h3>
+          <h1 class="text-start"><span class="element" id="thanks-text"></span></h1>
+          <div class="single-item" id="all-form">
+  
+            <div id="mad-form">
+              <div class="border-color rounded-3">
+                <div class="p-3 color-form-bg">
+                  <h3 class="text-white text-center">Are you mad at me?</h3>
                 </div>
-                <select
-                  class="overflow-hidden form-select border border-0 rounded-0"
-                  size="3"
-                  aria-label="size 3 select example"
-                >
+                <select id="mad-question" class="overflow-hidden form-select border border-0 rounded-0" size="3"
+                  aria-label="size 3 select example">
                   <option class="py-2 fs-6 ps-2" value="1">a little</option>
                   <option class="py-2 fs-6 ps-2" value="2">a lot</option>
-                  <option class="py-2 fs-6 ps-2" value="3">
-                    let's break up
-                  </option>
+                  <option class="py-2 fs-6 ps-2" value="3">let's break up</option>
                 </select>
               </div>
             </div>
-            <div class="form-card shadow bg-light">
+  
+            <div id="sulking-form">
               <div class="border-color rounded-3">
-                <div class="p-3">
+                <div class="p-3 color-form-bg">
                   <label for="c" class="d-flex justify-content-center">
-                    <h3 class="text-black text-center">
-                      How should I deal with you sulking
-                    </h3>
+                    <h3 class="text-white text-center">How should I deal with you sulking</h3>
                   </label>
                 </div>
-                <select
-                  name="type"
-                  class="overflow-hidden form-select border border-0 rounded-0"
-                  size="3"
-                  aria-label="size 3 select example"
-                  id="c"
-                ></select>
+                <select id="sulking-question" name="type" class="overflow-hidden form-select border border-0 rounded-0"
+                  size="3" aria-label="size 3 select example">
+                  <option class="py-2 fs-6 ps-2" value="1">buy me some food</option>
+                  <option class="py-2 fs-6 ps-2" value="2">ask me out for movie date</option>
+                  <option class="py-2 fs-6 ps-2" value="3">buy me a gift</option>
+                </select>
               </div>
             </div>
-            <div class="form-card">
-              <select
-                name="type"
-                class="overflow-hidden form-select"
-                id="sc"
-                size="5"
-                aria-label="size 3 select example"
-              ></select>
-
-              <div class="form-floating">
-                <textarea
-                  class="form-control"
-                  placeholder="Leave a comment here"
-                  id="floatingTextarea"
-                ></textarea>
-                <label for="floatingTextarea">Comments</label>
+            <div id="choice-form" >
+              <div class="border-color rounded-3">
+                <div class=" color-form-bg">
+                  <select id="choice-question" name="type" class="overflow-hidden form-select p-0 0" size="3"
+                    aria-label="size 3 select example">
+                    <!-- <option class="py-2 fs-6 ps-2" value="1">What do you wanna eat?</option>
+                    <option class="py-2 fs-6 ps-2" value="2">What movie would you love?</option>
+                    <option class="py-2 fs-6 ps-2" value="3">What do you want as a love gift?</option> -->
+                  </select>
+                </div>
+                <div class="form-floating ">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                  <label for="floatingTextarea">Comments</label>
+                </div>
               </div>
             </div>
-            <div id="form-card shadow bg-light">
+            <div id="mood-form">
               <div id="four" class="border-color rounded-3">
-                <div class="p-3">
-                  <h3 class="text-black text-center">
-                    Are your mood messing up?
+                <div class="p-3 color-form-bg">
+                  <h3 class="text-white text-center">Are your mood messing up?
                   </h3>
                 </div>
-                <select
-                  class="overflow-hidden form-select border border-0 rounded-0"
-                  size="3"
-                  aria-label="size 3 select example"
-                >
-                  <option class="py-2 fs-6 ps-2" value="1">
-                    Because of me?
+                <select id="mood-question" class="overflow-hidden form-select border border-0 rounded-0" size="3"
+                  aria-label="size 3 select example">
+                  <option class="py-2 fs-6 ps-2" value="1">Because of me?
                   </option>
-                  <option class="py-2 fs-6 ps-2" value="2">
-                    family issue?
+                  <option class="py-2 fs-6 ps-2" value="2">family issue?
                   </option>
-                  <option class="py-2 fs-6 ps-2" value="3">
-                    inner conflict
+                  <option class="py-2 fs-6 ps-2" value="3">inner conflict
                   </option>
                 </select>
               </div>
             </div>
-            <div id="form-card shadow bg-light">
+            <div id="upset-form">
               <div id="five" class="border-color rounded-3">
-                <div class="p-3">
-                  <h3 class="text-black text-center">
-                    What did i do to make you upset?
+                <div class="p-3 color-form-bg">
+                  <h3 class="text-white text-center">What did i do to make you upset?
                   </h3>
                 </div>
-                <select
-                  class="overflow-hidden form-select border border-0 rounded-0"
-                  size="3"
-                  aria-label="size 3 select example"
-                >
-                  <option class="py-2 fs-6 ps-2" value="1">
-                    Am i flirting with girls?
+                <select class="overflow-hidden form-select border border-0 rounded-0" size="3"
+                  aria-label="size 3 select example">
+                  <option class="py-2 fs-6 ps-2" value="1">Am i flirting with girls?
                   </option>
-                  <option class="py-2 fs-6 ps-2" value="2">
-                    Didnt i give you attention?
+                  <option class="py-2 fs-6 ps-2" value="2"> Didn't i give you attention?
                   </option>
                 </select>
               </div>
             </div>
-            <div id="form-card shadow bg-light">
-              <div
-                id="submit-btn"
-                class="d-flex justify-content-center p-5 m-5 d-none"
-              >
-                <button class="submit-btn">Submit</button>
-              </div>
-              <div
-                id="thanks-text"
-                class="d-flex justify-content-center d-none"
-              >
-                <h3 class="">Thanks For Using Our Service</h3>
-              </div>
+            <div id="serious-form">
               <div id="last-next" class="border-color rounded-3">
-                <div class="p-3">
-                  <h3 class="text-black text-center">Are you being serious?</h3>
+                <div class="p-3 color-form-bg">
+                  <h3 class="text-white text-center">Are you being serious?
+                  </h3>
                 </div>
-                <select
-                  id="last-next"
-                  class="overflow-hidden form-select border border-0 rounded-0"
-                  size="3"
-                  aria-label="size 3 select example"
-                >
-                  <option class="py-2 fs-6 ps-2" value="1">No</option>
-                  <option class="py-2 fs-6 ps-2" value="2">Yes</option>
+                <select id="serious-question" class="overflow-hidden form-select border border-0 rounded-0" size="3"
+                  aria-label="size 3 select example">
+                  <option class="py-2 fs-6 ps-2" value="1">No
+                  </option>
+                  <option class="py-2 fs-6 ps-2" value="2">Yes
+                  </option>
                 </select>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <button data-nextId="sendResultPage" class="btn btn-danger switchPage">
-        Switch Page
-      </button>
     </section>
     <!-- end by Caleb -->
     <section id="sendResultPage">
@@ -220,17 +176,13 @@
       </button>
     </section>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
 
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="./js/script.js"></script>
     <!-- Link to welcomeSoulmate js -->
