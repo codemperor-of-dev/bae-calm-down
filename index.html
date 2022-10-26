@@ -1,191 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bae Calm Down</title>
 
-    <!-- FontAwesone -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bae Calm Down</title>
 
-    <!-- CSS only -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
+  <!-- FontAwesone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-  </head>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
 
-  <body>
-    <!-- <header class="py-3 mb-4 border-bottom">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+  <!-- <header class="py-3 mb-4 border-bottom">
     <a href="#" class="d-flex align-items-center mb-3 ms-5 mb-md-0 me-md-auto text-white text-decoration-none">
       <img src="assests/logo.png" width="80" />
       <span class="fs-2">Calm Your Bae Down</span>
     </a>
   </header> -->
-    <section id="landingPage" class="win-htet">
-      <!-- Text Wrapper -->
-      <div class="textWrapper">
-        <h1>Bae , Don't Mad With Me</h1>
-        <p class="textStyle">
-          Hey , your sweetie uses our servie to calm down your madness and try
-          to solve problem. Go Easy buddy . Fill this form and make more love
-          with your sweetie pie !!! <br />
-          &hearts; FOREVERMORE &hearts;
-          <button data-nextId="formPage" class="switchPage formLinkStyle">
-            Get Form Link Here ...
-          </button>
-        </p>
-      </div>
+  <section id="landingPage" class="win-htet">
+    <!-- Text Wrapper -->
+    <div class="textWrapper">
+      <h1>Bae , Don't Mad With Me</h1>
+      <p class="textStyle">
+        Hey , your sweetie uses our servie to calm down your madness and try
+        to solve problem. Go Easy buddy . Fill this form and make more love
+        with your sweetie pie !!! <br />
+        &hearts; FOREVERMORE &hearts;
+        <button data-nextId="formPage" class="switchPage formLinkStyle">
+          Get Form Link Here ...
+        </button>
+      </p>
+    </div>
 
-      <!-- Image Wrapper -->
-      <div class="imgWrapper">
-        <img src="../assests/soulmate.svg" class="imgStyle" />
-      </div>
-    </section>
-    <!-- start by Caleb -->
-    <section id="formPage" class="container-fluid">
-      <div class="row justify-content-center  ">
-        <div class="col-12 col-md-12 col-lg-6 col-xl-6 ">
-          <div class="d-flex justify-content-end ">
-            <img src="./assests/bird.png" class="bird-img w-25 animate__animated animate__fadeInRight animate__delay-1s "
-              alt="">
-          </div>
-          <h1 class="text-start"><span class="element" id="thanks-text"></span></h1>
-          <div class="single-item" id="all-form">
-  
-            <div id="mad-form">
-              <div class="border-color rounded-3">
-                <div class="p-3 color-form-bg">
-                  <h3 class="text-white text-center">Are you mad at me?</h3>
-                </div>
-                <select id="mad-question" class="overflow-hidden form-select border border-0 rounded-0" size="3"
-                  aria-label="size 3 select example">
-                  <option class="py-2 fs-6 ps-2" value="1">a little</option>
-                  <option class="py-2 fs-6 ps-2" value="2">a lot</option>
-                  <option class="py-2 fs-6 ps-2" value="3">let's break up</option>
-                </select>
-              </div>
-            </div>
-  
-            <div id="sulking-form">
-              <div class="border-color rounded-3">
-                <div class="p-3 color-form-bg">
-                  <label for="c" class="d-flex justify-content-center">
-                    <h3 class="text-white text-center">How should I deal with you sulking</h3>
-                  </label>
-                </div>
-                <select id="sulking-question" name="type" class="overflow-hidden form-select border border-0 rounded-0"
-                  size="3" aria-label="size 3 select example">
-                  <option class="py-2 fs-6 ps-2" value="1">buy me some food</option>
-                  <option class="py-2 fs-6 ps-2" value="2">ask me out for movie date</option>
-                  <option class="py-2 fs-6 ps-2" value="3">buy me a gift</option>
-                </select>
-              </div>
-            </div>
-            <div id="choice-form" >
-              <div class="border-color rounded-3">
-                <div class=" color-form-bg">
-                  <select id="choice-question" name="type" class="overflow-hidden form-select p-0 0" size="3"
-                    aria-label="size 3 select example">
-                    <!-- <option class="py-2 fs-6 ps-2" value="1">What do you wanna eat?</option>
-                    <option class="py-2 fs-6 ps-2" value="2">What movie would you love?</option>
-                    <option class="py-2 fs-6 ps-2" value="3">What do you want as a love gift?</option> -->
-                  </select>
-                </div>
-                <div class="form-floating ">
-                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                  <label for="floatingTextarea">Comments</label>
-                </div>
-              </div>
-            </div>
-            <div id="mood-form">
-              <div id="four" class="border-color rounded-3">
-                <div class="p-3 color-form-bg">
-                  <h3 class="text-white text-center">Are your mood messing up?
-                  </h3>
-                </div>
-                <select id="mood-question" class="overflow-hidden form-select border border-0 rounded-0" size="3"
-                  aria-label="size 3 select example">
-                  <option class="py-2 fs-6 ps-2" value="1">Because of me?
-                  </option>
-                  <option class="py-2 fs-6 ps-2" value="2">family issue?
-                  </option>
-                  <option class="py-2 fs-6 ps-2" value="3">inner conflict
-                  </option>
-                </select>
-              </div>
-            </div>
-            <div id="upset-form">
-              <div id="five" class="border-color rounded-3">
-                <div class="p-3 color-form-bg">
-                  <h3 class="text-white text-center">What did i do to make you upset?
-                  </h3>
-                </div>
-                <select class="overflow-hidden form-select border border-0 rounded-0" size="3"
-                  aria-label="size 3 select example">
-                  <option class="py-2 fs-6 ps-2" value="1">Am i flirting with girls?
-                  </option>
-                  <option class="py-2 fs-6 ps-2" value="2"> Didn't i give you attention?
-                  </option>
-                </select>
-              </div>
-            </div>
-            <div id="serious-form">
-              <div id="last-next" class="border-color rounded-3">
-                <div class="p-3 color-form-bg">
-                  <h3 class="text-white text-center">Are you being serious?
-                  </h3>
-                </div>
-                <select id="serious-question" class="overflow-hidden form-select border border-0 rounded-0" size="3"
-                  aria-label="size 3 select example">
-                  <option class="py-2 fs-6 ps-2" value="1">No
-                  </option>
-                  <option class="py-2 fs-6 ps-2" value="2">Yes
-                  </option>
-                </select>
-              </div>
-            </div>
-          </div>
+    <!-- Image Wrapper -->
+    <div class="imgWrapper">
+      <img src="../assests/soulmate.svg" class="imgStyle" />
+    </div>
+  </section>
+  <!-- start by Caleb -->
+  <section id="formPage" class="container-fluid">
+    <div class="row justify-content-center  ">
+      <div class="col-12 col-md-12 col-lg-6 col-xl-6 ">
+        <div class="d-flex justify-content-end ">
+          <img src="./assests/bird.png" class="bird-img w-25 animate__animated animate__fadeInRight animate__delay-1s "
+            alt="">
         </div>
+        <h1 class="text-start"><span class="element" id="thanks-text"></span></h1>
+        <div class="single-item" id="all-form">
+
+          <form id="mad-form">
+            <div class="border-color rounded-3">
+              <div class="p-3 color-form-bg">
+                <h3 class="text-white text-center">Are you mad at me?</h3>
+              </div>
+                <select id="mad-question" class="overflow-hidden form-select border border-0 rounded-0" size="3"
+                aria-label="size 3 select example">
+                <option class="py-2 fs-6 ps-2" value="1">a little</option>
+                <option class="py-2 fs-6 ps-2" value="2">a lot</option>
+                <option class="py-2 fs-6 ps-2" value="3">let's break up</option>
+              </select>
+            </div>
+          </form>
+
+          <form id="sulking-form">
+            <div class="border-color rounded-3">
+              <div class="p-3 color-form-bg">
+                <label for="c" class="d-flex justify-content-center">
+                  <h3 class="text-white text-center">How should I deal with you sulking?</h3>
+                </label>
+              </div>
+              <select id="sulking-question" name="type" class="overflow-hidden form-select border border-0 rounded-0"
+                size="3" aria-label="size 3 select example">
+                <option class="py-2 fs-6 ps-2" value="1">buy me some food</option>
+                <option class="py-2 fs-6 ps-2" value="2">ask me out for movie date</option>
+                <option class="py-2 fs-6 ps-2" value="3">buy me a gift</option>
+              </select>
+            </div>
+          </form>
+
+          <form action="#" id="choice-form">
+            <div class="border-color rounded-3">
+              <div class=" color-form-bg">
+                <select id="choice-question" name="type" class="overflow-hidden form-select p-0 0" size="3"
+                  aria-label="size 3 select example">
+                </select>
+              </div>
+              <div class="form-floating ">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Comments</label>
+              </div>
+            </div>
+              <div class="d-flex justify-content-end">
+                <input type="submit" class="btn btn-outline-primary my-3 " name="" id="submit-btn">
+              </div>
+          </form>
+
+          <form action="#" id="mood-form">
+            <div id="four" class="border-color rounded-3">
+              <div class="p-3 color-form-bg">
+                <h3 class="text-white text-center">Are your mood messing up?
+                </h3>
+              </div>
+              <select id="mood-question" class="overflow-hidden form-select border border-0 rounded-0" size="3"
+                aria-label="size 3 select example">
+                <option class="py-2 fs-6 ps-2" value="1">Because of me?
+                </option>
+                <option class="py-2 fs-6 ps-2" value="2">Family issue?
+                </option>
+                <option class="py-2 fs-6 ps-2" value="3">Inner conflict?
+                </option>
+              </select>
+            </div>
+            <div class="d-flex justify-content-end">
+              <input type="submit" class="btn btn-outline-primary my-3 " name="" id="submit-btn">
+            </div>
+          </form>
+
+          <form action="#" id="upset-form">
+            <div id="five" class="border-color rounded-3">
+              <div class="p-3 color-form-bg">
+                <h3 class="text-white text-center">What did I do to make you upset?
+                </h3>
+              </div>
+              <select class="overflow-hidden form-select border border-0 rounded-0" size="3"
+                aria-label="size 3 select example">
+                <option class="py-2 fs-6 ps-2" value="1">Am I flirting with girls?
+                </option>
+                <option class="py-2 fs-6 ps-2" value="2"> Didn't I give you attention?
+                </option>
+              </select>
+            </div>
+            <div class="d-flex justify-content-end">
+              <input type="submit" class="btn btn-outline-primary my-3 " name="" id="submit-btn">
+            </div>
+          </form>
+
+          <form id="serious-form">
+            <div id="last-next" class="border-color rounded-3">
+              <div class="p-3 color-form-bg">
+                <h3 class="text-white text-center">Are you being serious?
+                </h3>
+              </div>
+              <select id="serious-question" class="overflow-hidden form-select border border-0 rounded-0" size="3"
+                aria-label="size 3 select example">
+                <option class="py-2 fs-6 ps-2" value="1">No
+                </option>
+                <option class="py-2 fs-6 ps-2" value="2">Yes
+                </option>
+              </select>
+            </div>
+            <div class="d-flex justify-content-end">
+              <input type="submit" class="btn btn-outline-primary my-3 " name="" id="yes-submit">
+            </div>
+          </form>
+
+        </div>
+        <div class="py-3" id="prev-btn">
+          <button class="btn btn-outline-primary w-25">Previous</button>
+        </div>
+       
       </div>
-    </section>
-    <!-- end by Caleb -->
-    <section id="sendResultPage">
-      <button data-nextId="feedbackPage" class="btn btn-danger switchPage">
-        Switch Page
-      </button>
-    </section>
-    <section id="feedbackPage">
-      <button data-nextId="landingPage " class="btn btn-danger switchPage">
-        Switch Page
-      </button>
-    </section>
-    <!-- JavaScript Bundle with Popper -->
+    </div>
+  </section>
+  <!-- end by Caleb -->
+  <section id="sendResultPage">
+    <button data-nextId="feedbackPage" class="btn btn-danger switchPage">
+      Switch Page
+    </button>
+  </section>
+  <section id="feedbackPage">
+    <button data-nextId="landingPage " class="btn btn-danger switchPage">
+      Switch Page
+    </button>
+  </section>
+  <!-- JavaScript Bundle with Popper -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="./js/script.js"></script>
-    <!-- Link to welcomeSoulmate js -->
-    <script src="./js/decryptEmail.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="./js/script.js"></script>
+  <!-- Link to welcomeSoulmate js -->
+  <script src="./js/decryptEmail.js"></script>
+</body>
+
 </html>

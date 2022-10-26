@@ -36,22 +36,25 @@ const moodForm = document.getElementById("mood-form");
 const upsetForm = document.getElementById("upset-form");
 const seriousForm = document.getElementById("serious-form");
 const allForm = document.getElementById("all-form");
+
 const thanksText = document.getElementById("thanks-text")
 const typedCursor = document.querySelector(".typed-cursor");
+const prevBtn = document.getElementById("prev-btn");
+const submitBtn = document.getElementById("submit-btn");
+const yesSubmit = document.getElementById("yes-submit");
 
 sulkingForm.style.display = "none";
 choiceForm.style.display = "none";
 moodForm.style.display = "none";
 upsetForm.style.display = "none";
 seriousForm.style.display = "none";
-
+prevBtn.style.display = "none";
 
 madQuestion.addEventListener("click", function () {
-  madForm.style.display = "none"
+  madForm.style.display = "none";
   switch (this.value) {
     case "1":
-      sulkingForm.style.display = "grid";
- 
+        sulkingForm.style.display = "grid";   
       break;
     case "2":
       moodForm.style.display = "grid"
@@ -71,30 +74,27 @@ seriousQuestion.addEventListener("click", function () {
   if (this.value === "1") {
     seriousForm.style.display = "none"
     madForm.style.display = "grid";
-  } else {
-    allForm.remove();
+  } 
+});
+yesSubmit.addEventListener("click",function(){
+  allForm.remove();
     thanksText.remove();
     typedCursor.remove();
     document.body.innerHTML += `
-    <div  class="d-flex  justify-content-center p-5 m-5"">
-    <button class="submit-btn ">Submit</button>
-</div>
-<div  class="d-flex justify-content-center ">
+<div  class="d-flex justify-content-center my-5">
   <h1 class="text-color fw-bold">Thanks For Using Our Service</h1>
 </div>
     `;
-  }
 });
 
 sulkingQuestion.addEventListener("click", function () {
-console.log(this.value)
+
 sulkingForm.style.display = "none"
 choiceForm.style.display = "block"
   switch (this.value) {
-    case "1":
-         
+    case "1":  
         choiceQuestion.innerHTML = `<option class="color-form-bg sc-padding m-0 fw-bold text-white text-center"  disabled>What do you wanna eat?</option>`;
-      break;
+        break;
     case "2":  
         choiceQuestion.innerHTML = `<option class="color-form-bg sc-padding m-0 fw-bold text-white text-center"  disabled>What movie would you love?</option>`;
       break;
