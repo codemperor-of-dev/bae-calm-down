@@ -74,7 +74,7 @@ floatingTextarea.addEventListener("keyup", function () {
     submitBtnComment.classList.add("disabled");
   } else if (0 < this.value.length) {
     submitBtnComment.classList.remove("disabled");
-  };
+  }
 });
 moodQuestion.addEventListener("click", function () {
   if (this.value === "1") {
@@ -82,13 +82,13 @@ moodQuestion.addEventListener("click", function () {
     upsetForm.style.display = "grid";
   } else if (this.value === "2" || this.value === "3") {
     submitBtnMood.classList.remove("disabled");
-  };
+  }
 });
 
 upsetQuestion.addEventListener("click", function () {
   if (this.value === "1" || this.value === "2") {
     submitBtnUpset.classList.remove("disabled");
-  };
+  }
 });
 
 seriousQuestion.addEventListener("click", function () {
@@ -97,7 +97,7 @@ seriousQuestion.addEventListener("click", function () {
     madForm.style.display = "grid";
   } else if (this.value === "2") {
     submitBtnYes.classList.remove("disabled");
-  };
+  }
 });
 // yesSubmit.addEventListener("click",function(){
 //   allForm.remove();
@@ -124,4 +124,3 @@ sulkingQuestion.addEventListener("click", function () {
       break;
   }
 });
-
