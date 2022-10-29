@@ -1,6 +1,22 @@
+
+
+// win htet start 
+
+// get email from url
+const params = new URLSearchParams(location.search);
+const email = params.get("email");
+
+//decript email
+let decrypt_email = window.btoa(email);
+
+
+
+//win htet ends
+
+
 const switchBtn = document.querySelectorAll(".switchPage");
 const sections = document.querySelectorAll("section");
-console.log(sections);
+
 switchBtn.forEach((button) => {
   button.addEventListener("click", (event) => {
     for (let i = 0; i < sections.length - 1; i++) {
@@ -80,13 +96,13 @@ moodQuestion.addEventListener("click", function () {
   if (this.value === "1") {
     moodForm.style.display = "none";
     upsetForm.style.display = "grid";
-  } else if (this.value === "2" || this.value === "3") {
+  } else if (this.value === "4" || this.value === "5") {
     submitBtnMood.classList.remove("disabled");
   }
 });
 
 upsetQuestion.addEventListener("click", function () {
-  if (this.value === "1" || this.value === "2") {
+  if (this.value === "6" || this.value === "7") {
     submitBtnUpset.classList.remove("disabled");
   }
 });
@@ -95,7 +111,7 @@ seriousQuestion.addEventListener("click", function () {
   if (this.value === "1") {
     seriousForm.style.display = "none";
     madForm.style.display = "grid";
-  } else if (this.value === "2") {
+  } else if (this.value === "8") {
     submitBtnYes.classList.remove("disabled");
   }
 });
@@ -124,3 +140,42 @@ sulkingQuestion.addEventListener("click", function () {
       break;
   }
 });
+
+// Han lin start 
+const answerIdEl = document.querySelectorAll('[data-answerId="answerId"]')
+let answerId ; 
+let answerOptional ='';
+const answerSubmit = document.querySelectorAll('[type="submit"]')
+answerSubmit.forEach(btn => {
+  btn.addEventListener('click', (event)=> {
+    event.preventDefault()
+
+    if(answerIdEl[2].value !== ''){
+      answerId = answerIdEl[2].value;
+    } else if (answerIdEl[0].value !== '' )  {
+      answerId = answerIdEl[0].value;
+      answerOptional = floatingTextarea.value;
+    } else if (answerIdEl[1].value !== '') {
+      answerId = answerIdEl[1].value;
+    } else if (answerIdEl[3].value !== '') {
+      answerId = answerIdEl[3].value;
+    }
+    let encryptAnswerId = btoa(answerId)
+    let encryptAnswerOptional = window.btoa(answerOptional)
+   console.log(decrypt_email, encryptAnswerId , encryptAnswerOptional)
+
+   var templateParams = {
+      decrypt_email,
+      encryptAnswerId ,
+      encryptAnswerOptional,
+};
+ 
+emailjs.send(service_g3i3i0p, template_nv7cz4a, templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+  })
+}
+  )
