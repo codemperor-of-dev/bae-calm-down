@@ -1,6 +1,4 @@
-
-
-// win htet start 
+// win htet start
 
 // get email from url
 const params = new URLSearchParams(location.search);
@@ -9,21 +7,21 @@ const email = params.get("email");
 //decript email
 let decrypt_email = window.atob(email);
 
-
-
 //win htet ends
-
 
 const switchBtn = document.querySelectorAll(".switchPage");
 const sections = document.querySelectorAll("section");
 
 switchBtn.forEach((button) => {
   button.addEventListener("click", (event) => {
+    console.log(event.target.getAttribute("data-nextId"));
     for (let i = 0; i < sections.length - 1; i++) {
       let section = sections[i];
       if (section.id === event.target.getAttribute("data-nextId")) {
+        console.log(event.target.getAttribute("data-nextId"));
         section.style.display = "block";
       } else {
+        console.log(event.target.getAttribute("data-nextId"));
         section.style.display = "none";
       }
     }
@@ -141,41 +139,48 @@ sulkingQuestion.addEventListener("click", function () {
   }
 });
 
-// Han lin start 
-const answerIdEl = document.querySelectorAll('[data-answerId="answerId"]')
-let answerId ; 
-let answerOptional ='';
-const answerSubmit = document.querySelectorAll('[type="submit"]')
-answerSubmit.forEach(btn => {
-  btn.addEventListener('click', (event)=> {
-    event.preventDefault()
+// Han lin start
+const answerIdEl = document.querySelectorAll('[data-answerId="answerId"]');
+let answerId;
+let answerOptional = "";
+const answerSubmit = document.querySelectorAll('[type="submit"]');
+answerSubmit.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    event.preventDefault();
 
-    if(answerIdEl[2].value !== ''){
+    if (answerIdEl[2].value !== "") {
       answerId = answerIdEl[2].value;
-    } else if (answerIdEl[0].value !== '' )  {
+    } else if (answerIdEl[0].value !== "") {
       answerId = answerIdEl[0].value;
       answerOptional = floatingTextarea.value;
-    } else if (answerIdEl[1].value !== '') {
+    } else if (answerIdEl[1].value !== "") {
       answerId = answerIdEl[1].value;
-    } else if (answerIdEl[3].value !== '') {
+    } else if (answerIdEl[3].value !== "") {
       answerId = answerIdEl[3].value;
     }
-    let encryptAnswerId = btoa(answerId)
-    let encryptAnswerOptional = window.btoa(answerOptional)
-   console.log(decrypt_email, encryptAnswerId , encryptAnswerOptional)
+    let encryptAnswerId = btoa(answerId);
+    let encryptAnswerOptional = window.btoa(answerOptional);
+    console.log(decrypt_email, encryptAnswerId, encryptAnswerOptional);
 
-   var templateParams = {
+    var templateParams = {
       decrypt_email,
-      encryptAnswerId ,
+      encryptAnswerId,
       encryptAnswerOptional,
-};
- 
-emailjs.send( "service_g3i3i0p" ,"template_nv7cz4a", templateParams)
-    .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
-    }, function(error) {
-       console.log('FAILED...', error);
-    });
-  })
-}
-  )
+    };
+
+    emailjs.send("service_g3i3i0p", "template_nv7cz4a", templateParams).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+        const sendResultPage =
+          document.getElementsByClassName("sendResultPage")[0];
+        const flexContainer =
+          document.getElementsByClassName("flex-container")[0];
+        flexContainer.style.display = "none";
+        sendResultPage.style.display = "flex";
+      }
+    );
+  });
+});
