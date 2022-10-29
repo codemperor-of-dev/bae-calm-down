@@ -227,3 +227,11 @@ select option:hover {
   opacity: 0.8;
   transform: rotate(18deg);
 }
+.sendResultPage > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sendResultPage h3 {
+  color: var(--color);
+}

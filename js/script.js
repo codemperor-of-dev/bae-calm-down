@@ -9,6 +9,7 @@ let decrypt_email = window.atob(email);
 
 //win htet ends
 
+//switching between each page
 const switchBtn = document.querySelectorAll(".switchPage");
 const sections = document.querySelectorAll("section");
 
@@ -18,15 +19,14 @@ switchBtn.forEach((button) => {
     for (let i = 0; i < sections.length - 1; i++) {
       let section = sections[i];
       if (section.id === event.target.getAttribute("data-nextId")) {
-        console.log(event.target.getAttribute("data-nextId"));
         section.style.display = "block";
       } else {
-        console.log(event.target.getAttribute("data-nextId"));
         section.style.display = "none";
       }
     }
   });
 });
+//switching ends
 
 let options = {
   strings: ["Please...", "Fill Form..."],
@@ -171,15 +171,15 @@ answerSubmit.forEach((btn) => {
     emailjs.send("service_g3i3i0p", "template_nv7cz4a", templateParams).then(
       function (response) {
         console.log("SUCCESS!", response.status, response.text);
-      },
-      function (error) {
-        console.log("FAILED...", error);
         const sendResultPage =
           document.getElementsByClassName("sendResultPage")[0];
         const flexContainer =
           document.getElementsByClassName("flex-container")[0];
         flexContainer.style.display = "none";
         sendResultPage.style.display = "flex";
+      },
+      function (error) {
+        console.log("FAILED...", error);
       }
     );
   });
