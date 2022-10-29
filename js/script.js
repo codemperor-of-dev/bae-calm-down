@@ -7,7 +7,7 @@ const params = new URLSearchParams(location.search);
 const email = params.get("email");
 
 //decript email
-let decrypt_email = window.btoa(email);
+let decrypt_email = window.atob(email);
 
 
 
